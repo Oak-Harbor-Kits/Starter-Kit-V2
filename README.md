@@ -44,11 +44,13 @@ h2 {
         color: #fff;
         margin-bottom: 50/24em; <--- Everything inside the h1 is divided by this new font size
     }
+}
 '''
   
   
 Also, if this span had a different font size than the h1, we set the new font size divided by the parents new font size.
 
+```
 h2 {
     font-size: 24/20em; <--- new font size
 
@@ -59,7 +61,7 @@ h2 {
         margin-bottom: 50/50em; <--- Everything inside the span is divided by this new font size
     }
 } 
-                                     
+```                                 
 This is what we have to do to maintain the ratio.  The h1 font size is based on the body, and since it has a new font size, its properties and children will now be based on its new font size, and so on.  Think of them all as working together.  The spans font size is getting their information from the H1s font size, and that H1 is getting its info from the body.  This maintains the proportions of what 1em is scaled to. 
                                      
 THE PAYOFF - HOW TO GET 100% TRUE RESPONSIVE BEHAVIOR
