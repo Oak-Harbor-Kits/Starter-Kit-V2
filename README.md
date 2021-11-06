@@ -2,6 +2,14 @@
 
 This is a new and improved website starter kit that takes advantage of a new responsive system I implemented using ems and vw units to scale everything.  This is a truly 100% responsive custom coded HTML and CSS website starter template.
 
+# How to use the dark mode functionality
+
+Here's the link to read about how it works and even download the code yourself to add to new projects or existing projects
+
+https://www.oakharborwebdesigns.com/blog/2020/december/how-to-add-dark-mode-to-a-website#blog-post
+
+In the LESS file (dark.less), choose the screen size you want to target and inside the body.dark-mode brackets just start adding you new style declarations for dark mode and that’s it!
+
 
 # SET UP LESS 
 
@@ -15,13 +23,13 @@ This is a new and improved website starter kit that takes advantage of a new res
 
   INSTALL LESS
 
-  To install the LESS preproccessor, you first must download and install npm so you can install any program you want with one line of code:
+  To install the LESS preprocessor, you first must download and install npm so you can install any program you want with one line of code:
 
   https://nodejs.org/en/download/
 
   Once that is downloaded and installed, download and install GIT terminal or just use your default terminal window on your computer
 
-  Downlaod GIT
+  Download GIT
   https://gitforwindows.org/
 
   OR
@@ -52,7 +60,7 @@ As you may or may not know, em units are based on the font size of its parent el
   
   
   
-# Explanation of how this sytem works
+# Explanation of how this system works
   
 What happens here, is every single element's measurements that would be in pixels will now be in ems divided 20 (the default font size on desktop).  So when we have an element that is 100px wide, in the .less file we write it as 100/20em, and the compiler will compile it in css as 5em.  Since that em calculation is based on the 20px, when we change the body font size to 15px it will shrink EVERYTHING because the em calculations are on a smaller font size, and will scale down proportionally.  
   
@@ -143,4 +151,4 @@ Example - Start at 320px wide and drag the screen to make it larger.  You'll not
           
 https://responsive-circle.netlify.app/
                                  
-So instead of writing new css styles to shrink every element to be smaller, all we have to do is write one line of code and the entire container shrinks proportionally together and maintains their scale from mobile to desktop.  This is the true power of using ems properly and mathematically. 
+So instead of writing new css styles to shrink every element to be smaller, all we have to do is write one line of code and the entire container shrinks proportionally together and maintains their scale from mobile to desktop.  This is the true power of using ems properly and mathematically.
