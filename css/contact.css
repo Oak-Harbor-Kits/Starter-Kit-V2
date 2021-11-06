@@ -9,15 +9,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     position: relative;
     z-index: 1;
   }
@@ -52,8 +46,7 @@
     opacity: .5;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     z-index: -1;
   }
 }
@@ -117,13 +110,8 @@
     margin-bottom: 5em;
   }
   #form #contact .input-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin-bottom: 1.5em;
   }
   #form #contact .input-group label {
@@ -146,18 +134,6 @@
   #form #contact .input-group textarea {
     min-height: 10em;
     padding-top: 1em;
-  }
-  #form #contact .input-group ::-webkit-input-placeholder {
-    color: #d4d4d4;
-    font-family: "Roboto", sans-serif;
-  }
-  #form #contact .input-group :-ms-input-placeholder {
-    color: #d4d4d4;
-    font-family: "Roboto", sans-serif;
-  }
-  #form #contact .input-group ::-ms-input-placeholder {
-    color: #d4d4d4;
-    font-family: "Roboto", sans-serif;
   }
   #form #contact .input-group ::placeholder {
     color: #d4d4d4;
@@ -206,14 +182,9 @@
   }
   #form .contact-right {
     max-width: 35em;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   #form .contact-right .info-group {
     width: 40%;
@@ -226,18 +197,10 @@
 /* Tablet */
 @media only screen and (min-width: 48em) {
   #form #contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   #form #contact .input-group {
     width: 48%;
@@ -269,7 +232,6 @@
   #form #contact .input-group textarea {
     border-bottom: none;
     position: relative;
-    -webkit-transition: padding .3s;
     transition: padding .3s;
     background: transparent;
   }
@@ -284,7 +246,6 @@
     bottom: -0.05em;
     left: 0;
     z-index: 10;
-    -webkit-transition: height .3s, border .3s;
     transition: height .3s, border .3s;
     z-index: -1;
   }
@@ -298,14 +259,9 @@
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #form {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
+    justify-content: space-between;
+    align-content: flex-start;
     font-size: 1.5vw;
     width: 100%;
     max-width: 57.2em;
@@ -319,10 +275,7 @@
     max-width: none;
   }
   #form .contact-right {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     max-width: 15em;
     margin: 0;
     height: 27.7em;
