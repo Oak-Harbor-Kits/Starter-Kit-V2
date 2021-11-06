@@ -3,6 +3,10 @@
 <---          Landing           -->
 <--- -------------------------- -*/
 
+main {
+    min-height: 1000/20em;
+}
+
 /* Mobile */
 @media only screen and (min-width: 0em) {
 
@@ -12,6 +16,10 @@
         padding-top: 100/20em;
         position: relative;
         z-index: 1;
+        background: url("/images/landing-mobile.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 
         &:before {
             content: '';
@@ -123,6 +131,10 @@
         padding: 123/20em 0 229/20em 0;
         z-index: 1;
         overflow: hidden;
+        background: url("/images/landing.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 
         .hero-content {
             display: flex;
@@ -146,6 +158,7 @@
     #hero {
         padding-top: 300/20em;
         padding-bottom: 280/20em;
+        background-attachment: fixed;
 
         .business-casual {
             right: 50/20em;
@@ -177,10 +190,9 @@
             padding: 42/20em;
             width: 90%;
             margin: auto;
-            margin-bottom: 10/20em;
 
-            &:first-of-type {
-                border-radius: 5/20em 5/20em 0 0;
+            &:nth-of-type(2) {
+                border-bottom: 1/20em solid rgba(73, 181, 176, .5);
             }
 
             &:nth-of-type(2) {
@@ -201,10 +213,6 @@
                         color: #fff;
                     }
                 }
-            }
-
-            &:last-of-type {
-                border-radius: 0 0 5/20em 5/20em;
             }
 
             h2 {
@@ -243,11 +251,14 @@
 }
 
 /* Large Phone */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
+@media only screen and (min-width: 600px) and (max-width: 790px) {
 
     #services {
         flex-direction: row;
         flex-wrap: wrap;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         .service {
             &:nth-of-type(1) {
                 border-right: 1/20em solid rgba(255, 255, 255, .05);
@@ -277,7 +288,7 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 791px) {
 
     #services {
         flex-direction: row;
@@ -293,7 +304,7 @@
         .service {
             margin: 0;
             width: 372/20em;
-            height: 317/20em;
+            height: auto;
             border-radius: 5/20em 5/20em 0 0;
 
             &:nth-of-type(2) {

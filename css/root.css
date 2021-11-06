@@ -389,7 +389,7 @@
   }
   /* Navigation Links */
   .mobile-wrapper img {
-    height: 1.9em;
+    height: 3.9em;
     margin-top: 0.25em;
   }
   .navbar-menu {
@@ -443,7 +443,7 @@
     visibility: hidden;
     font-family: 'Roboto', sans-serif;
   }
-  .active-menu {
+  #active-menu {
     border-right: 0.2em solid var(--primary);
     color: var(--primary);
   }
@@ -696,7 +696,7 @@
   #footer {
     background: #3A3A3C;
     padding: 3.1em 0 3.8em;
-    font-size: min(4vw, 2em);
+    font-size: min(4vw, 1.2em);
   }
   #footer .left-section {
     margin: auto;
