@@ -82,7 +82,7 @@ For this to work properly and scale PRECISELY, we need the .less calculation sys
 h2 {
     color: #fff;
     font-size: 24/20em; <--- new declared font size
-    line-height: 28/24;
+    line-height: 28/24; <--- Everything inside the h1 is divided by this new font size (line height does not need the em unit added to it)
     margin-bottom: 15/24em; <--- Everything inside the h1 is divided by this new font size
 
     span {
