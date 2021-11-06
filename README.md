@@ -3,7 +3,7 @@
 This is a new and improved website starter kit that takes advantage of a new responsive system I implemented using ems and vw units to scale everything.  This is a truly 100% responsive custom coded HTML and CSS website starter template.
 
 
-SET UP LESS 
+# SET UP LESS 
 
   This new starter kit is based on ems for more responsive design.  I have utilized the LESS preprocessor to use its ability to do em calculations.  I use the Koala App to   choose the css file I want to watch and I click the .less files I want to auto compile and hit the compile button.  This will now continuously watch for changes in your .less file inside the css folder and compile the .less into it's own .css file to load instantly on save every time in your local server. 
 
@@ -41,7 +41,7 @@ SET UP LESS
   
   
   
-CALCULATING THE EM UNITS
+# CALCULATING THE EM UNITS
 
 Introduction:
 As you may or may not know, em units are based on the font size of its parent element. If the parent element does not have a declared font size in your css, then the next parent element with a declared font size will be it's base.  Since I am not declaring a font size on any containers, literally everything on the page will look up to the body tag for a font size, and since we declared a font size of 20px that is what they will divide themselves by to get the em value.  So I just set the font size on the <body> to be 15px on mobile, tablet, and small desktop up to 1023px wide.  Then on 1024px wide it is set 20 the actual default of 20px.
@@ -52,7 +52,7 @@ As you may or may not know, em units are based on the font size of its parent el
   
   
   
-Explanation of how this sytem works
+# Explanation of how this sytem works
   
 What happens here, is every single element's measurements that would be in pixels will now be in ems divided 20 (the default font size on desktop).  So when we have an element that is 100px wide, in the .less file we write it as 100/20em, and the compiler will compile it in css as 5em.  Since that em calculation is based on the 20px, when we change the body font size to 15px it will shrink EVERYTHING because the em calculations are on a smaller font size, and will scale down proportionally.  
   
@@ -74,7 +74,7 @@ Inspect the page and resize it manually from 320px to desktop and watch it grow.
   
   
   
-IMPORTANT!! ******* MUST READ AND UNDERSTAND HOW TO MAKE THIS WORK
+# IMPORTANT!! ******* MUST READ AND UNDERSTAND HOW TO MAKE THIS WORK
 
 For this to work properly and scale PRECISELY, we need the .less calculation system to make this easier.  So if we have an H1 text that is supposed to be 50px, we would write it as 50/20em.  Just like we would normally.  HOWEVER, any of it's properties and children need to be divided by the new declared font size.  So if it has a margin-bottom of 20px, it will be 20/50em, NOT 20/20em.  Their parent has their own font size declared now. Here's an example of how this will look in .less:
 
@@ -116,7 +116,7 @@ This is what we have to do to maintain the ratio.  The h1 font size is based on 
   
   
                                  
-THE PAYOFF - HOW TO GET 100% TRUE RESPONSIVE BEHAVIOR
+# THE PAYOFF - HOW TO GET 100% TRUE RESPONSIVE BEHAVIOR
 Why is this important? Because at 1500px or however wide your design ends up being, you can set the body font size to 1vw, which is the width of the viewport (screen).  When the body size is now determined by the screen size, EVERY element will now grow proportionally with the growth of the screen size.  This is what I mean when I say TRUELY 100% responsive - it responds to the size of the screen and every single element on the page will grow proportionally with each to fit the screen size.  
           
 Here's an example showing this in action.  This is a demo link of the current Starter Kit as of November 5, 2021.
@@ -131,7 +131,7 @@ Inspect the page, and set the the viewport at the top to "Dimensions: Responsive
   
   
         
-MORE USES FOR THE VW UNIT
+# MORE USES FOR THE VW UNIT
 Lets say you have a section of 4 cards that you'd like to have displayed in 2 rows of two on mobile.  When you write the styles with the desktop sizes and do your flexboxing but the boxes are still too big fit next to each other on a mobile screen, you can use vw units to scale down the elements.  On the parent container for the items, set the font size with a min/max calculation here:
 
 LESS min/max calculation
