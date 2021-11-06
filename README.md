@@ -5,38 +5,38 @@ This is a new and improved website starter kit that takes advantage of a new res
 
 SET UP LESS 
 
-This new starter kit is based on ems for more responsive design.  I have utilized the LESS preprocessor to use its ability to do em calculations.  I use the Koala App to choose the css file I want to watch and I click the .less files I want to auto compile and hit the compile button.  This will now continuously watch for changes in your .less file inside the css folder and compile the .less into it's own .css file to load instantly on save every time in your local server. 
+  This new starter kit is based on ems for more responsive design.  I have utilized the LESS preprocessor to use its ability to do em calculations.  I use the Koala App to   choose the css file I want to watch and I click the .less files I want to auto compile and hit the compile button.  This will now continuously watch for changes in your .less file inside the css folder and compile the .less into it's own .css file to load instantly on save every time in your local server. 
 
-Here is the link to download Koala:
+  Here is the link to download Koala:
 
-http://koala-app.com/
+  http://koala-app.com/
 
-You can have it watch multiple .less files and multiple folders at once.  You just have to select each .less file individually and hit the compile button in the lower right.
+  You can have it watch multiple .less files and multiple folders at once.  You just have to select each .less file individually and hit the compile button in the lower right.
 
-INSTALL LESS
+  INSTALL LESS
 
-To install the LESS preproccessor, you first must download and install npm so you can install any program you want with one line of code:
+  To install the LESS preproccessor, you first must download and install npm so you can install any program you want with one line of code:
 
-https://nodejs.org/en/download/
+  https://nodejs.org/en/download/
 
-Once that is downloaded and installed, download and install GIT terminal or just use your default terminal window on your computer
+  Once that is downloaded and installed, download and install GIT terminal or just use your default terminal window on your computer
 
-Downlaod GIT
-https://gitforwindows.org/
+  Downlaod GIT
+  https://gitforwindows.org/
 
-OR
+  OR
 
-Open the default terminal on your computer
-https://www.ionos.com/help/email/troubleshooting-mail-basicmail-business/access-the-command-prompt-or-terminal/
+  Open the default terminal on your computer
+  https://www.ionos.com/help/email/troubleshooting-mail-basicmail-business/access-the-command-prompt-or-terminal/
 
-Then open your GIT terminal or default computer terminal and copy and paste this in your terminal and hit enter to install LESS
+  Then open your GIT terminal or default computer terminal and copy and paste this in your terminal and hit enter to install LESS
 
-npm install less
+  npm install less
 
-Now you have LESS on your machine!  Hopefully that wasn't too bad.  It was a little tricky for me to get started too but I used the resources I linked here to figure it out.
+  Now you have LESS on your machine!  Hopefully that wasn't too bad.  It was a little tricky for me to get started too but I used the resources I linked here to figure it out.
 
-  
-  
+
+
 =================================================
   
   
