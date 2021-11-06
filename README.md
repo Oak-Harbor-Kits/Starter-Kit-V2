@@ -32,7 +32,7 @@ IMPORTANT!! ******* MUST READ AND UNDERSTAND HOW TO MAKE THIS WORK
 
 For this to work properly and scale PRECISELY, we need the .less calculation system to make this easier.  So if we have an H1 text that is supposed to be 50px, we would write it as 50/20em.  Just like we would normally.  HOWEVER, any of it's properties and children need to be divided by the new declared font size.  So if it has a margin-bottom of 20px, it will be 20/50em, NOT 20/20em.  Their parent has their own font size declared now. Here's an example of how this will look in .less:
 
-h2 {
+{h2 {
     color: #fff;
     font-size: 24/20em; <--- new declared font size
     line-height: 28/24;
@@ -43,7 +43,7 @@ h2 {
         color: #fff;
         margin-bottom: 50/24em; <--- Everything inside the h1 is divided by this new font size
     }
-}  
+}  }
   
   
 Also, if this span had a different font size than the h1, we set the new font size divided by the parents new font size.
