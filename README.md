@@ -37,7 +37,7 @@ This is a new and improved website starter kit that takes advantage of a new res
 
 
 
-=================================================
+
   
   
   
@@ -48,7 +48,7 @@ As you may or may not know, em units are based on the font size of its parent el
 
   
   
-=================================================
+
   
   
   
@@ -70,7 +70,7 @@ Inspect the page and resize it manually from 320px to desktop and watch it grow.
 
   
   
-=================================================
+
   
   
   
@@ -112,7 +112,7 @@ This is what we have to do to maintain the ratio.  The h1 font size is based on 
 
   
   
-=================================================
+
   
   
                                  
@@ -127,7 +127,7 @@ Inspect the page, and set the the viewport at the top to "Dimensions: Responsive
 
   
   
-=================================================
+
   
   
         
