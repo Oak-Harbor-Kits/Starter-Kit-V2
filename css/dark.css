@@ -1,0 +1,483 @@
+/* Dark Mode Toggle */
+@media screen and (min-width: 0px) {
+  :root {
+    --dark: #121212;
+    --medium: #292929;
+    --light: #3c3c3c;
+  }
+  .dark-toggle {
+    background: var(--primary);
+    border: none;
+  }
+  .dark-mode-button {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    height: 1.2em;
+    width: 1.2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dark-mode-button:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 1.75em;
+    width: 1.75em;
+    background: #fff;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-radius: 50%;
+    -webkit-box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
+            box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
+  }
+  .dark-mode-button img {
+    display: block;
+    width: 0.75em;
+    height: 0.75em;
+    position: absolute;
+  }
+  .dark-mode-button .moon {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+  .dark-mode-button .sun {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .dark-mode-group {
+    position: absolute;
+    top: -17em;
+    right: 1em;
+    width: 4em;
+    height: 23.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .dark-mode-group p {
+    font-size: .7em !important;
+    text-align: center;
+    color: #fff;
+  }
+  .top-dark-mode-button {
+    position: absolute;
+    top: 2em;
+    right: 0.8em;
+    z-index: 1000;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+    z-index: 1001;
+  }
+  .dark {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  .light {
+    display: block;
+  }
+  .dark {
+    display: none;
+  }
+  /* Dark mode Styles */
+  body.dark-mode {
+    background: var(--dark);
+    /* Navigation */
+  }
+  body.dark-mode h2,
+  body.dark-mode p {
+    color: #fff;
+    opacity: .9;
+  }
+  body.dark-mode p {
+    color: #fff !important;
+    opacity: .9;
+  }
+  body.dark-mode h3 {
+    color: var(--primary);
+  }
+  body.dark-mode .top-dark-mode-button:before {
+    background: #000;
+  }
+  body.dark-mode .top-dark-mode-button .moon {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  body.dark-mode .top-dark-mode-button .sun {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+  body.dark-mode .dark {
+    display: block;
+    opacity: 1;
+    z-index: 1;
+  }
+  body.dark-mode .light {
+    display: none;
+  }
+  body.dark-mode .side-nav a {
+    color: #fff;
+  }
+  body.dark-mode .hamburger-inner,
+  body.dark-mode .hamburger-inner::before,
+  body.dark-mode .hamburger-inner::after {
+    background: #fff;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+  }
+  body.dark-mode .hamburger-inner {
+    background: #fff;
+  }
+  body.dark-mode .hamburger.is-active .hamburger-inner::after,
+  body.dark-mode .hamburger.is-active .hamburger-inner::before {
+    background: #fff;
+  }
+  body.dark-mode .mobile-nav {
+    background: var(--dark);
+  }
+  body.dark-mode .mobile-nav .light {
+    display: none;
+  }
+  body.dark-mode .mobile-nav .dark {
+    display: block;
+  }
+  body.dark-mode .navbar-menu {
+    background: var(--dark);
+  }
+}
+/* Tablets */
+@media only screen and (max-width: 1023px) {
+  .dark-mode-button {
+    font-size: inherit;
+  }
+}
+/* Small Desktop */
+@media screen and (min-width: 1024px) {
+  .top-dark-mode-button {
+    position: absolute;
+    left: auto;
+    top: 50%;
+    -webkit-transform: translateY(-54%);
+            transform: translateY(-54%);
+    right: 0em;
+    z-index: 5000;
+    height: 1.1em;
+    width: 1.1em;
+  }
+  .top-dark-mode-button:after {
+    color: #000;
+  }
+  .top-dark-mode-button:before {
+    display: none;
+  }
+  .top-dark-mode-button img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  body.dark-mode:before {
+    background: var(--dark);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0em 0.35em 1.45em 0em;
+            box-shadow: rgba(0, 0, 0, 0.3) 0em 0.35em 1.45em 0em;
+  }
+  body.dark-mode .navbar-menu img {
+    display: block;
+  }
+  body.dark-mode .navbar-menu {
+    overflow: visible;
+  }
+  body.dark-mode .navbar-menu:before {
+    background: var(--dark);
+  }
+  body.dark-mode .side-nav a#active-menu:before {
+    background: var(--darkPrimary);
+  }
+  body.dark-mode .navbar-menu {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: transparent;
+  }
+  body.dark-mode .navbar-menu .light {
+    display: none;
+  }
+  body.dark-mode .navbar-menu .dark {
+    display: block;
+  }
+}
+/* Intermediate Desktop */
+@media screen and (min-width: 2000px) {
+  .top-dark-mode-button {
+    right: 0em;
+    left: auto;
+    height: 1.6em;
+    width: 1.6em;
+  }
+  .top-dark-mode-button img {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+/* Pages */
+@media screen and (min-width: 0px) {
+  body.dark-mode {
+    /*-- -------------------------- -->
+        <---           Home             -->
+        <--- -------------------------- -*/
+    /*-- -------------------------- -->
+        <---           About            -->
+        <--- -------------------------- -*/
+    /*-- -------------------------- -->
+        <---          Contact           -->
+        <--- -------------------------- -*/
+    /*-- -------------------------- -->
+        <---        Testimonials        -->
+        <--- -------------------------- -*/
+  }
+  body.dark-mode #hero {
+    position: relative;
+  }
+  body.dark-mode #hero:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .7;
+    top: 0;
+    left: 0;
+  }
+  body.dark-mode #hero h1 {
+    color: #fff;
+  }
+  body.dark-mode #hero .call-now .light {
+    display: none;
+  }
+  body.dark-mode #hero .call-now .dark {
+    display: inline-block;
+  }
+  body.dark-mode #hero .call-now .text {
+    color: #fff;
+  }
+  body.dark-mode #hero .call-now .number {
+    color: #fff;
+  }
+  body.dark-mode #hero .button-solid {
+    background: var(--darkPrimary);
+  }
+  body.dark-mode #hero .button-solid:before {
+    background: var(--tint);
+  }
+  body.dark-mode #services .service {
+    background: var(--darkPrimary);
+  }
+  body.dark-mode #services .service .button-solid:before {
+    background: var(--tint);
+  }
+  body.dark-mode #services .service:nth-of-type(2) {
+    background: var(--tint);
+  }
+  body.dark-mode #services .service:nth-of-type(2) .button-solid:before {
+    background: var(--primary);
+  }
+  body.dark-mode #about:before {
+    background: #0a0a0a;
+  }
+  body.dark-mode #about .left-section:before {
+    background: var(--shade);
+    opacity: .1;
+  }
+  body.dark-mode #about .right-section .topper {
+    color: var(--shade);
+  }
+  body.dark-mode #about .right-section h2 {
+    color: #fff;
+  }
+  body.dark-mode #about .right-section h2:before {
+    background: var(--shade);
+    opacity: .1;
+  }
+  body.dark-mode #about .right-section h2 span {
+    color: var(--shade);
+  }
+  body.dark-mode #about .right-section .decoration .line {
+    background: var(--shade);
+  }
+  body.dark-mode #about .right-section .button-solid {
+    background: var(--darkPrimary);
+  }
+  body.dark-mode #how-we-know {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  body.dark-mode #how-we-know .left-section {
+    background: var(--medium);
+  }
+  body.dark-mode #how-we-know .left-section ul li {
+    color: #fff;
+    opacity: .9;
+  }
+  body.dark-mode #how-we-know .right-section {
+    background: var(--darkPrimary);
+  }
+  body.dark-mode #how-we-know .right-section .button-solid {
+    color: var(--darkPrimary);
+  }
+  body.dark-mode #how-we-know .right-section .button-solid::before {
+    background: var(--tint);
+  }
+  body.dark-mode #how-we-know .right-section .button-solid:hover {
+    color: #fff;
+  }
+  body.dark-mode #get-started .topper {
+    color: var(--shade);
+  }
+  body.dark-mode #get-started .steps .step .image-group {
+    background: #262626;
+  }
+  body.dark-mode #get-started .steps .number {
+    border: 0.34615385em solid var(--dark);
+  }
+  body.dark-mode #get-started .steps h3 {
+    color: #fff;
+  }
+  body.dark-mode #get-started .steps .dots .dot {
+    background: var(--shade);
+  }
+  body.dark-mode #get-started .steps .dots .dot:nth-of-type(5) {
+    background: var(--primary) !important;
+  }
+  body.dark-mode #get-started .button-solid {
+    background: var(--darkPrimary);
+  }
+  body.dark-mode #get-started .button-solid:before {
+    background: var(--tint);
+  }
+  body.dark-mode #reviews .topper {
+    color: var(--shade);
+  }
+  body.dark-mode #reviews h2 {
+    color: #fff;
+  }
+  body.dark-mode #reviews .right-section .review {
+    background: var(--tint);
+  }
+  body.dark-mode #reviews .right-section .identity .light {
+    display: none;
+  }
+  body.dark-mode #reviews .right-section .identity .dark {
+    display: inline-block;
+  }
+  body.dark-mode #reviews .right-section .identity .name {
+    color: #fff;
+  }
+  body.dark-mode #footer {
+    background: #0e0d0d;
+  }
+  body.dark-mode #footer .button-solid {
+    background: var(--darkPrimary);
+  }
+  body.dark-mode #footer .button-solid:before {
+    background: var(--tint);
+  }
+  body.dark-mode #int-hero {
+    background: url("../images/about-dark.jpg");
+    background-size: cover;
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  body.dark-mode #about-content .content .topper {
+    color: var(--shade);
+  }
+  body.dark-mode #about-content .content h2 {
+    color: #fff;
+  }
+  body.dark-mode #about-content .content h2:before {
+    background: var(--shade);
+    opacity: .1;
+  }
+  body.dark-mode #about-content .content h2 span {
+    color: var(--shade);
+  }
+  body.dark-mode #about-content .content .decoration .line {
+    background: var(--shade);
+  }
+  body.dark-mode #staff h2 {
+    color: #fff;
+  }
+  body.dark-mode #staff .member .title {
+    color: #fff;
+    opacity: .7;
+  }
+  body.dark-mode #form .topper {
+    color: var(--shade);
+  }
+  body.dark-mode #form h2 {
+    color: #fff;
+  }
+  body.dark-mode #form label {
+    color: #fff;
+  }
+  body.dark-mode #form ::-webkit-input-placeholder {
+    opacity: .3;
+  }
+  body.dark-mode #form :-ms-input-placeholder {
+    opacity: .3;
+  }
+  body.dark-mode #form ::-ms-input-placeholder {
+    opacity: .3;
+  }
+  body.dark-mode #form ::placeholder {
+    opacity: .3;
+  }
+  body.dark-mode #form .contact-right {
+    background: var(--tint);
+  }
+  body.dark-mode #reviews .name {
+    color: #fff;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  body.dark-mode #how-we-know {
+    background: var(--darkPrimary);
+  }
+}

@@ -1,0 +1,630 @@
+/* Dark Mode Toggle */
+
+@media screen and (min-width: 0px) {
+
+    :root {
+        --dark: #121212;
+        --medium: #292929;
+        --light: #3c3c3c;
+    }
+
+    .dark-toggle {
+        background: var(--primary);
+        border: none;
+    }
+
+    .dark-mode-button {
+        font-size: 20px;
+        background: transparent;
+        border: none;
+        height: 24/20em;
+        width: 24/20em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 35/20em;
+            width: 35/20em;
+            background: #fff;
+            opacity: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            box-shadow: rgba(27, 163, 156, 0.3) 0/20em 7/20em 29/20em 0/20em;
+        }
+
+        img {
+            display: block;
+            width: 15/20em;
+            height: 15/20em;
+            position: absolute;
+        }
+
+        .moon {
+            transform: translateY(0px);
+            transition: .3s ease;
+            opacity: 1;
+            visibility: visible;
+        }
+    
+        .sun {
+            transform: translateY(30px);
+            transition: .3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .dark-mode-group {
+        position: absolute;
+        top: -340/20em;
+        right: 20/20em;
+        width: 80/20em;
+        height: 470/20em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        
+        p {
+            font-size: .7em !important;
+            text-align: center;
+            color: #fff;
+        }
+    }
+     
+    .top-dark-mode-button {
+        position: absolute;
+        top: 40/20em;
+        right: 16/20em;
+        z-index: 1000;
+        -webkit-transition: .3s ease-in;
+        -o-transition: .3s ease-in;
+        transition: .3s ease-in;
+        z-index: 1001;
+    }
+
+    .dark {
+        display: none;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .light {
+        display: block;
+    }
+
+    .dark {
+        display: none;
+    }
+
+    /* Dark mode Styles */
+    body.dark-mode {
+
+        background: var(--dark);
+        
+        h2, p {
+            color: #fff;
+            opacity: .9;
+        }
+        
+        p {
+            color: #fff !important;
+            opacity: .9;
+        }
+        
+        h3 {
+            color: var(--primary);
+        }
+
+        .top-dark-mode-button {
+
+            &:before {
+                background: #000;
+            }
+
+            .moon {
+                transform: translateY(-30px);
+                transition: .3s ease;
+                opacity: 0;
+                visibility: hidden;
+            }
+        
+            .sun {
+                transform: translateY(0);
+                transition: .3s ease;
+                opacity: 1;
+                visibility: visible;
+            }
+            
+        }
+
+        /* Navigation */
+    
+        .dark {
+            display: block;
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        .light {
+            display: none;
+        }
+        
+        .side-nav a {
+            color: #fff;
+        }
+        
+        .hamburger-inner, 
+        .hamburger-inner::before, 
+        .hamburger-inner::after {
+            background: #fff;
+            -webkit-transition: .3s ease;
+            -o-transition: .3s ease;
+            transition: .3s ease;
+        }
+
+        .hamburger-inner {
+            background: #fff;
+        }
+        
+        .hamburger.is-active .hamburger-inner::after,
+        .hamburger.is-active .hamburger-inner::before {
+            background: #fff;
+        }
+
+        .mobile-nav {
+            background: var(--dark);
+
+            .light {
+                display: none;
+            }
+
+            .dark {
+                display: block;
+            }
+        }
+
+        .navbar-menu {
+            background: var(--dark);
+        }
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+
+
+}
+
+@media only screen and (max-width: 1023px) {
+
+    .dark-mode-button {
+        font-size: inherit;
+    }
+}
+
+/* Small Desktop */
+@media screen and (min-width: 1024px) {
+
+    .top-dark-mode-button {
+        position: absolute;
+        left: auto;
+        top: 50%;
+        transform: translateY(-54%);
+        right: 0/20em;
+        z-index: 5000;
+        height: 22/20em;
+        width: 22/20em;
+
+        &:after {
+            color: #000;
+        }
+
+        &:before {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    body.dark-mode {
+
+        &:before {
+            background: var(--dark);
+            box-shadow: rgba(0, 0, 0, 0.3) 0/20em 7/20em 29/20em 0/20em;
+        }
+
+        .navbar-menu img {
+            display: block;
+        }
+    
+        .navbar-menu {
+            overflow: visible;
+        }
+    
+        .navbar-menu:before {
+            background: var(--dark);
+        }
+
+        .side-nav {
+            a#active-menu {
+                &:before {
+                    background: var(--darkPrimary);
+                }
+            }
+        }
+    
+        .navbar-menu {
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            background: transparent;
+
+            .light {
+                display: none;
+            }
+
+            .dark {
+                display: block;
+            }
+        }
+        
+    }
+}
+
+/* Intermediate Desktop */
+@media screen and (min-width: 2000px) {
+
+    .top-dark-mode-button {
+        right: 0/20em;
+        left: auto;
+        height: 32/20em;
+        width: 32/20em;
+
+        img {
+            width: 30/20em;
+            height: 30/20em;
+        }
+    }
+}
+
+/* Pages */
+
+@media screen and (min-width: 0px) {
+
+    body.dark-mode {
+
+        /*-- -------------------------- -->
+        <---           Home             -->
+        <--- -------------------------- -*/
+    
+        #hero {
+            position: relative;
+    
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #000;
+                opacity: .7;
+                top: 0;
+                left: 0;
+            }
+    
+            h1 {
+                color: #fff;
+            }
+    
+            .call-now {
+                .light {
+                    display: none;
+                }
+    
+                .dark {
+                    display: inline-block;
+                }
+                .text {
+                    color: #fff;
+                }
+    
+                .number {
+                    color: #fff;
+                }
+            }
+    
+            .button-solid {
+                background: var(--darkPrimary);
+    
+                &:before {
+                    background: var(--tint);
+                }
+            }
+        }
+    
+        #services {
+            .service {
+                background: var(--darkPrimary);
+    
+                .button-solid {
+                    &:before {
+                        background: var(--tint);
+                    }
+                }
+    
+                &:nth-of-type(2) {
+                    background: var(--tint);
+    
+                    .button-solid {
+                        &:before {
+                            background:var(--primary);
+                        }
+                    }
+                }
+            }
+        }
+    
+        #about {
+            &:before {
+                background: #0a0a0a;
+            }
+            .left-section {
+                &:before {
+                    background: var(--shade);
+                    opacity: .1;
+                }
+            }
+            .right-section {
+                .topper {
+                    color: var(--shade);
+                }
+                h2 {
+                    color: #fff;
+    
+                    &:before {
+                        background: var(--shade);
+                        opacity: .1;
+                    }
+                    
+                    span {
+                        color: var(--shade);
+                    }
+                }
+    
+                .decoration {
+                    .line {
+                        background: var(--shade);
+                    }
+                }
+    
+                .button-solid {
+                    background: var(--darkPrimary);
+                }
+            }
+        }
+    
+        #how-we-know {
+            box-shadow: none;
+            .left-section {
+                background: var(--medium);
+    
+                ul {
+                    li {
+                        color: #fff;
+                        opacity: .9;
+                    }
+                }
+            }
+    
+            .right-section {
+                background: var(--darkPrimary);
+    
+                .button-solid {
+                    color: var(--darkPrimary);
+    
+                    &::before {
+                        background: var(--tint);
+                    }
+    
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    
+        #get-started {
+            .topper {
+                color: var(--shade);
+            }
+            .steps {
+    
+                .step {
+                    .image-group {
+                        background: #262626;
+                    }
+                }
+    
+                .number {
+                    border: 9/26em solid var(--dark);
+                }
+    
+                h3 {
+                    color: #fff;
+                }
+    
+                .dots {
+                    .dot {
+                        background: var(--shade);
+    
+                        &:nth-of-type(5) {
+                            background: var(--primary) !important;
+                        }
+                    }
+                }
+            }
+    
+            .button-solid {
+                background: var(--darkPrimary);
+    
+                &:before {
+                    background: var(--tint);
+                }
+            }
+        }
+    
+        #reviews {
+            .topper {
+                color: var(--shade);
+            }
+    
+            h2 {
+                color: #fff;
+            }
+    
+            .right-section {
+                .review {
+                    background: var(--tint);
+                }
+                .identity {
+                    .light {
+                        display: none;
+                    }
+    
+                    .dark {
+                        display: inline-block;
+                    }
+                    .name {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    
+        #footer {
+            background: rgb(14, 13, 13);
+            .button-solid {
+                background: var(--darkPrimary);
+    
+                &:before {
+                    background: var(--tint);
+                }
+            }
+        }
+    
+        /*-- -------------------------- -->
+        <---           About            -->
+        <--- -------------------------- -*/
+
+        #int-hero {
+            background: url("../images/about-dark.jpg");
+            background-size: cover;
+            background-position: center 80%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    
+        #about-content {
+            .content {
+                .topper {
+                    color: var(--shade);
+                }
+                h2 {
+                    color: #fff;
+    
+                    &:before {
+                        background: var(--shade);
+                        opacity: .1;
+                    }
+                    
+                    span {
+                        color: var(--shade);
+                    }
+                }
+    
+                .decoration {
+                    .line {
+                        background: var(--shade);
+                    }
+                }
+            }
+        }
+
+        #staff {
+            h2 {
+                color: #fff;
+            }
+
+            .member {
+                .title {
+                    color: #fff;
+                    opacity: .7;
+                }
+            }
+        }
+    
+        /*-- -------------------------- -->
+        <---          Contact           -->
+        <--- -------------------------- -*/
+    
+        #form {
+            .topper {
+                color: var(--shade);
+            }
+    
+            h2 {
+                color: #fff;
+            }
+    
+            label {
+                color: #fff;
+            }
+    
+            ::placeholder {
+                opacity: .3;
+            }
+    
+            .contact-right {
+                background: var(--tint);
+            }
+        }
+
+        /*-- -------------------------- -->
+        <---        Testimonials        -->
+        <--- -------------------------- -*/
+
+        #reviews {
+            .name {
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    body.dark-mode {
+        #how-we-know {
+            background: var(--darkPrimary);
+        }
+    }
+}

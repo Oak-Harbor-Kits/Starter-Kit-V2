@@ -1,0 +1,180 @@
+/*-- -------------------------- -->
+<---          Landing           -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+
+    #int-hero {
+        min-height: 50vh;
+        background: url("/images/about-mobile.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: #000;
+            opacity: .5;
+            top: 0;
+            left: 0;
+            z-index: -1;
+          }
+
+        h1 {
+            color: #fff;
+            font-size: 64/20em;
+            text-align: center;
+            margin: 0;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 200%;
+                max-height: 190/64em;
+                width: 40%;
+                background: transparent;
+                border: 10/64em solid var(--primary);
+                opacity: .5;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+        }
+    }
+    
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+
+    #int-hero {
+        font-size: 20px;
+        background: url("/images/about.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+
+    #int-hero {
+        min-height: 300/20em;
+        height: 300/20em;
+        margin-top: 148/20em;
+        background-attachment: fixed;
+        background-position: center 80%;
+        font-size: inherit;
+    }
+}
+
+/*-- -------------------------- -->
+<---        Testimonials        -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0) {
+
+    #reviews {
+        padding-top: 35/20em;
+        padding-bottom: 150/20em;
+
+        h2, .yellow-span {
+            display: block;
+            text-align: center;
+        }
+
+        .stars {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            margin-bottom: 40/20em;
+            margin-top: 150/20em;
+
+            &:first-of-type {
+                margin-top: 75/20em;
+            }
+
+            img {
+                width: 30/20em;
+                height: 30/20em;
+                display: inline-block;
+            }
+        }
+
+        p {
+            text-align: center;
+            width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .name {
+            font-size: 18/20em;
+            font-weight: bold;
+            text-align: center;
+            display: block;
+            margin-top: 50/18em;
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 40/18em;
+                width: 40/18em;
+                border-radius: 50%;
+                background: var(--primary);
+                opacity: .2;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 1024px) {
+
+    #reviews {
+        padding: 0px 0 100/20em;
+
+        .stars {
+            margin-top: 150/20em;
+        }
+    
+        p {
+            width: 700/20em;
+            margin: auto;
+        }
+    }
+
+}

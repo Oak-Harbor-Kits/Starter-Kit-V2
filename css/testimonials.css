@@ -1,0 +1,163 @@
+/*-- -------------------------- -->
+<---          Landing           -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #int-hero {
+    min-height: 50vh;
+    background: url("/images/about-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #int-hero:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #int-hero h1 {
+    color: #fff;
+    font-size: 3.2em;
+    text-align: center;
+    margin: 0;
+    position: relative;
+  }
+  #int-hero h1:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 200%;
+    max-height: 2.96875em;
+    width: 40%;
+    background: transparent;
+    border: 0.15625em solid var(--primary);
+    opacity: .5;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #int-hero {
+    font-size: 20px;
+    background: url("/images/about.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #int-hero {
+    min-height: 15em;
+    height: 15em;
+    margin-top: 7.4em;
+    background-attachment: fixed;
+    background-position: center 80%;
+    font-size: inherit;
+  }
+}
+/*-- -------------------------- -->
+<---        Testimonials        -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0) {
+  #reviews {
+    padding-top: 1.75em;
+    padding-bottom: 7.5em;
+  }
+  #reviews h2,
+  #reviews .yellow-span {
+    display: block;
+    text-align: center;
+  }
+  #reviews .stars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 2em;
+    margin-top: 7.5em;
+  }
+  #reviews .stars:first-of-type {
+    margin-top: 3.75em;
+  }
+  #reviews .stars img {
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+  }
+  #reviews p {
+    text-align: center;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #reviews .name {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 2.77777778em;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  #reviews .name:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2.22222222em;
+    width: 2.22222222em;
+    border-radius: 50%;
+    background: var(--primary);
+    opacity: .2;
+    z-index: -1;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 1024px) {
+  #reviews {
+    padding: 0px 0 5em;
+  }
+  #reviews .stars {
+    margin-top: 7.5em;
+  }
+  #reviews p {
+    width: 35em;
+    margin: auto;
+  }
+}
