@@ -15,15 +15,9 @@
     border: none;
     height: 1.2em;
     width: 1.2em;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   .dark-mode-button:before {
     content: '';
@@ -35,11 +29,9 @@
     opacity: 1;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
-    -webkit-box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
-            box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
+    box-shadow: rgba(27, 163, 156, 0.3) 0em 0.35em 1.45em 0em;
   }
   .dark-mode-button img {
     display: block;
@@ -48,17 +40,13 @@
     position: absolute;
   }
   .dark-mode-button .moon {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    -webkit-transition: .3s ease;
+    transform: translateY(0px);
     transition: .3s ease;
     opacity: 1;
     visibility: visible;
   }
   .dark-mode-button .sun {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-    -webkit-transition: .3s ease;
+    transform: translateY(30px);
     transition: .3s ease;
     opacity: 0;
     visibility: hidden;
@@ -94,6 +82,7 @@
     right: 0.8em;
     z-index: 1000;
     -webkit-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
     transition: 0.3s ease-in;
     z-index: 1001;
   }
@@ -129,17 +118,13 @@
     background: #000;
   }
   body.dark-mode .top-dark-mode-button .moon {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-    -webkit-transition: .3s ease;
+    transform: translateY(-30px);
     transition: .3s ease;
     opacity: 0;
     visibility: hidden;
   }
   body.dark-mode .top-dark-mode-button .sun {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transition: .3s ease;
+    transform: translateY(0);
     transition: .3s ease;
     opacity: 1;
     visibility: visible;
@@ -160,6 +145,7 @@
   body.dark-mode .hamburger-inner::after {
     background: #fff;
     -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
     transition: .3s ease;
   }
   body.dark-mode .hamburger-inner {
@@ -193,8 +179,7 @@
     position: absolute;
     left: auto;
     top: 50%;
-    -webkit-transform: translateY(-54%);
-            transform: translateY(-54%);
+    transform: translateY(-54%);
     right: 0em;
     z-index: 5000;
     height: 1.1em;
@@ -213,8 +198,7 @@
   }
   body.dark-mode:before {
     background: var(--dark);
-    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0em 0.35em 1.45em 0em;
-            box-shadow: rgba(0, 0, 0, 0.3) 0em 0.35em 1.45em 0em;
+    box-shadow: rgba(0, 0, 0, 0.3) 0em 0.35em 1.45em 0em;
   }
   body.dark-mode .navbar-menu img {
     display: block;
