@@ -1299,7 +1299,26 @@ input, select, textarea {
 		}
 		.logo {
 			border-radius: 9999px;
+			transition:  background-color 0.5s;
+			animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.3s both;
 		}
+		.logo:hover
+		{
+			background-color: rgba(255, 255, 255, 0.082);
+		}
+		.tracking-in-expand {
+			animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.3s both;
+		}
+		@keyframes tracking-in-expand {
+			0% {
+			letter-spacing: -0.5em;
+			opacity: 0;
+			}
+			100% {
+			opacity: 1;
+			}
+		}
+		
 			#header .logo .icon:before {
 				font-size: 2rem;
 			}
