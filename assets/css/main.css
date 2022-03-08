@@ -1,12 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -31,6 +25,10 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+}
+br {
+	margin-bottom: 2vh;
+	margin-top: 2vh;
 }
 
 ol, ul {
@@ -646,8 +644,8 @@ input, select, textarea {
 
 		.image:before {
 			pointer-events: none;
-			background-image: url("../../images/overlay.png");
-			background-color: rgba(19, 21, 25, 0.5);
+			/* background-image: url("../../images/overlay.png"); */
+			/* background-color: rgba(72, 73, 75, 0.041); */
 			border-radius: 4px;
 			content: '';
 			display: block;
@@ -1139,7 +1137,7 @@ input, select, textarea {
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.192), rgba(19, 21, 25, 0.233)), url("../../images/overlay.png");
 			background-size: auto,
  256px 256px;
 			background-position: center,
@@ -1300,21 +1298,21 @@ input, select, textarea {
 		.logo {
 			border-radius: 9999px;
 			transition:  background-color 0.5s;
-			animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.3s both;
+			animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) .2s both;
 		}
 		.logo:hover
 		{
 			background-color: rgba(255, 255, 255, 0.082);
 		}
 		.tracking-in-expand {
-			animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.3s both;
+			animation: tracking-in-expand .2s cubic-bezier(0.215, 0.610, 0.355, 1.000) .2s both;
 		}
 		@keyframes tracking-in-expand {
 			0% {
 			letter-spacing: -0.5em;
 			opacity: 0;
 			}
-			100% {
+			50% {
 			opacity: 1;
 			}
 		}
