@@ -1,0 +1,387 @@
+
+/*-- -------------------------- -->
+<---          Landing           -->
+<--- -------------------------- -*/
+
+main {
+    min-height: 1000/20em;
+}
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+
+    #hero {
+        font-size: inherit;
+        padding-bottom: 270/20em;
+        padding-top: 100/20em;
+        position: relative;
+        z-index: 1;
+        background: url("/images/landing-mobile.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: #ECEFFE;
+            opacity: .9;
+            top: 0;
+            left: 0;
+            z-index: -10;
+        }
+
+        .hero-content {
+            width: 96%;
+            max-width: 1144/20em;
+            margin: auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-content {
+            padding: 0;
+        }
+
+        .heroText {
+            width: 100%;
+            max-width: 578/20em;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 56/20em;
+            color: #000000;
+            line-height: 66/56;
+            margin-bottom: 23/56em;
+        }
+
+        p {
+            font-size: 18/20em;
+            line-height: 27/18;
+            margin-bottom: 24/18em;
+            color: #595959;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .button-solid {
+            margin: 0;
+            margin-right: 52/18em;
+            height: 53/18em;
+            padding-top: 3/18em;
+        }
+
+        .call-now {
+            height: 53/18em;
+            width: 164/18em;
+            font-size: 18/20em;
+            display: inline-block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            margin: 0;
+
+            img {
+                display: inline-block;
+                width: 21/18em;
+                height: 21/18em;
+            }
+
+            .dark {
+                display: none;
+            }
+
+            span {
+                display: block;
+            }
+
+            .text {
+                font-size: 12/20em;
+                line-height: 14/12;
+                text-transform: uppercase;
+                margin-bottom: 6/12em;
+            }
+
+            .number {
+                font-weight: bold;
+                line-height: 21/18;
+                font-size: 18/18em;
+            }
+        }
+
+        .business-casual {
+            display: none;
+        }
+    }
+    
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+
+    #hero {
+        padding: 123/20em 0 229/20em 0;
+        z-index: 1;
+        overflow: hidden;
+        background: url("/images/landing.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .business-casual {
+            display: block;
+            width: 350/20em;
+            position: absolute;
+            right: 0;
+            top: -70/20em;
+        }
+    }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+
+    #hero {
+        padding-top: 300/20em;
+        padding-bottom: 280/20em;
+        background-attachment: fixed;
+
+        .business-casual {
+            right: 50/20em;
+        }
+    }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+
+}
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+
+    #services {
+        padding-top: 0;
+        margin-top: -120/20em;
+        display: flex;
+        flex-direction: column-reverse;
+        z-index: 100;
+        position: relative;
+        .service {
+            background: #0e817c;
+            padding: 42/20em;
+            width: 90%;
+            margin: auto;
+
+            &:nth-of-type(2) {
+                border-bottom: 1/20em solid rgba(73, 181, 176, .5);
+            }
+
+            &:nth-of-type(2) {
+                background: #10625e;
+                width: 100%;
+                box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+                order: 1;
+                margin-bottom: 0;
+
+                .button-solid {
+                    color: #10625e;
+
+                    &:before {
+                        background: var(--primary);
+                    }
+    
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+
+            h2 {
+                color: #fff;
+                font-size: 24/20em;
+                line-height: 28/24;
+                margin-bottom: 15/24em;
+                text-align: left;
+                font-weight: 900;
+
+                span {
+                    display: block;
+                    color: #fff;
+                }
+            }
+
+            p {
+                color: #fff;
+                font-size: 18/20em;
+                line-height: 27/18;
+                text-align: left;
+                margin-bottom: 30/18em;
+                opacity: 1;
+            }
+
+            .button-solid {
+                background: #fff;
+                color: #10625e;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+/* Large Phone */
+@media only screen and (min-width: 600px) and (max-width: 790px) {
+
+    #services {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        .service {
+            &:nth-of-type(1) {
+                border-right: 1/20em solid rgba(255, 255, 255, .05);
+            }
+            &:nth-of-type(1), &:nth-of-type(3) {
+                width: 50%;
+                border-radius: 0;
+            }
+
+            &:nth-of-type(2) {
+                order: -1;
+
+                h2, p {
+                    text-align: center;
+                    max-width: 400/20em;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .button-solid {
+                    margin: auto;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 791px) {
+
+    #services {
+        flex-direction: row;
+        align-items: flex-end;
+        width: 96%;
+        max-width: 1144/20em;
+        margin: auto;
+        margin-top: -130/20em;
+        position: relative;
+        z-index: 100;
+        padding: 0;
+
+        .service {
+            margin: 0;
+            width: 372/20em;
+            height: auto;
+            border-radius: 5/20em 5/20em 0 0;
+
+            &:nth-of-type(2) {
+                order: initial;
+                width: 400/20em;
+                height: 345/20em;
+                border: none;
+            }
+
+            &:last-of-type {
+                border-radius: 5/20em 5/20em 0 0;
+            }
+        }
+    }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+
+    #services {
+        .service {
+            &:nth-of-type(2) {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+
+}
+
+/*-- -------------------------- -->
+<---           section          -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+
+}
+
+/*-- -------------------------- -->
+<---           section          -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+
+}

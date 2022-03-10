@@ -1,0 +1,323 @@
+
+/* Pages */
+
+@media screen and (min-width: 0px) {
+
+    body.dark-mode {
+
+        /*-- -------------------------- -->
+        <---           Home             -->
+        <--- -------------------------- -*/
+    
+        #hero {
+            position: relative;
+    
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #000;
+                opacity: .7;
+                top: 0;
+                left: 0;
+            }
+    
+            h1 {
+                color: #fff;
+            }
+    
+            .call-now {
+                .light {
+                    display: none;
+                }
+    
+                .dark {
+                    display: inline-block;
+                }
+                .text {
+                    color: #fff;
+                }
+    
+                .number {
+                    color: #fff;
+                }
+            }
+    
+            .button-solid {
+                background: var(--darkPrimary);
+    
+                &:before {
+                    background: var(--tint);
+                }
+            }
+        }
+    
+        #services {
+            .service {
+                background: var(--darkPrimary);
+    
+                .button-solid {
+                    &:before {
+                        background: var(--tint);
+                    }
+                }
+    
+                &:nth-of-type(2) {
+                    background: var(--tint);
+    
+                    .button-solid {
+                        &:before {
+                            background:var(--primary);
+                        }
+                    }
+                }
+            }
+        }
+    
+        #about {
+            &:before {
+                background: #0a0a0a;
+            }
+            .left-section {
+                &:before {
+                    background: var(--shade);
+                    opacity: .1;
+                }
+            }
+            .right-section {
+                .topper {
+                    color: var(--shade);
+                }
+                h2 {
+                    color: #fff;
+    
+                    &:before {
+                        background: var(--shade);
+                        opacity: .1;
+                    }
+                    
+                    span {
+                        color: var(--shade);
+                    }
+                }
+    
+                .decoration {
+                    .line {
+                        background: var(--shade);
+                    }
+                }
+    
+                .button-solid {
+                    background: var(--darkPrimary);
+                }
+            }
+        }
+    
+        #how-we-know {
+            box-shadow: none;
+            .left-section {
+                background: var(--medium);
+    
+                ul {
+                    li {
+                        color: #fff;
+                        opacity: .9;
+                    }
+                }
+            }
+    
+            .right-section {
+                background: var(--darkPrimary);
+    
+                .button-solid {
+                    color: var(--darkPrimary);
+    
+                    &::before {
+                        background: var(--tint);
+                    }
+    
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    
+        #get-started {
+            .topper {
+                color: var(--shade);
+            }
+            .steps {
+    
+                .step {
+                    .image-group {
+                        background: #262626;
+                    }
+                }
+    
+                .number {
+                    border: 9/26em solid var(--dark);
+                }
+    
+                h3 {
+                    color: #fff;
+                }
+    
+                .dots {
+                    .dot {
+                        background: var(--shade);
+    
+                        &:nth-of-type(5) {
+                            background: var(--primary) !important;
+                        }
+                    }
+                }
+            }
+    
+            .button-solid {
+                background: var(--darkPrimary);
+    
+                &:before {
+                    background: var(--tint);
+                }
+            }
+        }
+    
+        #reviews {
+            .topper {
+                color: var(--shade);
+            }
+    
+            h2 {
+                color: #fff;
+            }
+    
+            .right-section {
+                .review {
+                    background: var(--tint);
+                }
+                .identity {
+                    .light {
+                        display: none;
+                    }
+    
+                    .dark {
+                        display: inline-block;
+                    }
+                    .name {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    
+        #footer {
+            background: rgb(14, 13, 13);
+            .button-solid {
+                background: var(--darkPrimary);
+    
+                &:before {
+                    background: var(--tint);
+                }
+            }
+        }
+    
+        /*-- -------------------------- -->
+        <---           About            -->
+        <--- -------------------------- -*/
+
+        #int-hero {
+            background: url("../images/about-dark.jpg");
+            background-size: cover;
+            background-position: center 80%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    
+        #about-content {
+            .content {
+                .topper {
+                    color: var(--shade);
+                }
+                h2 {
+                    color: #fff;
+    
+                    &:before {
+                        background: var(--shade);
+                        opacity: .1;
+                    }
+                    
+                    span {
+                        color: var(--shade);
+                    }
+                }
+    
+                .decoration {
+                    .line {
+                        background: var(--shade);
+                    }
+                }
+            }
+        }
+
+        #staff {
+            h2 {
+                color: #fff;
+            }
+
+            .member {
+                .title {
+                    color: #fff;
+                    opacity: .7;
+                }
+            }
+        }
+    
+        /*-- -------------------------- -->
+        <---          Contact           -->
+        <--- -------------------------- -*/
+    
+        #form {
+            .topper {
+                color: var(--shade);
+            }
+    
+            h2 {
+                color: #fff;
+            }
+    
+            label {
+                color: #fff;
+            }
+    
+            ::placeholder {
+                opacity: .3;
+            }
+    
+            .contact-right {
+                background: var(--tint);
+            }
+        }
+
+        /*-- -------------------------- -->
+        <---        Testimonials        -->
+        <--- -------------------------- -*/
+
+        #reviews {
+            .name {
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    body.dark-mode {
+        #how-we-know {
+            background: var(--darkPrimary);
+        }
+    }
+}
