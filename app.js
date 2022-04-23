@@ -50,40 +50,43 @@ var body = document.querySelector("body");
 
 // Dark Mode Action
 let darkMode = localStorage.getItem("darkMode");
-const darkModeToggle = document.querySelector('.dark-mode-button');
-// for an optional footer dark mode button as well
-const darkModeToggleFooter = document.querySelector('footer .dark-mode-button');
 
-// This is where you add the dakr mode class.  When the dark mode is enabled as true in localstorage,
+// querySelectorAll returns an array of all elements with the argument's class
+const darkModeButtons = document.querySelectorAll('.dark-mode-button');
+
+// This is where you add the dark mode class.  When the dark mode is enabled as true in localstorage,
 // it will add all the dark-mode classes to the elements we created in the variables above
 const enableDarkMode = () => {
-
-// Core dark mode styles
-body.classList.add("dark-mode");
-localStorage.setItem("darkMode", "enabled")
+    // Core dark mode styles
+    body.classList.add("dark-mode");
+    localStorage.setItem("darkMode", "enabled")
 }
 
 // This is where we remove dark mode.  Just copy and paste all the lines where you added a class
 // and paste them into this function, then change "addClass" to "removeClass"
 const disableDarkMode = () => {
-
-body.classList.remove("dark-mode");
-localStorage.setItem("darkMode", null)
+    body.classList.remove("dark-mode");
+    localStorage.setItem("darkMode", null)
 }
 
 if (darkMode == "enabled") {
 enableDarkMode();
 }
 
-// add event listener to the dark mode button toggle
-darkModeToggle.addEventListener('click', () => {
-// on click, check localstorage for the dark mode value
-darkMode = localStorage.getItem("darkMode");
-if (darkMode !== "enabled") {
-  // if dark mode is not enabled, run this function to set it to enabled
-  enableDarkMode();
-} else {
-  // if dark mode is enabled, run this function to set it to disabled
-  disableDarkMode();
+// toggleDarkMode function we can add to any button as an event listener
+const toggleDarkMode = () => {
+    // on click, check localstorage for the dark mode value
+    darkMode = localStorage.getItem("darkMode");
+    if (darkMode !== "enabled") {
+        // if dark mode is not enabled, run this function to set it to enabled
+        enableDarkMode();
+    } else {
+        // if dark mode is enabled, run this function to set it to disabled
+        disableDarkMode();
+    }
 }
-})
+
+// add event listeners to the dark mode buttons
+for (button in darkModeButtons) {
+    darkModeButtons[button].addEventListener('click', () => {toggleDarkMode()})
+}
