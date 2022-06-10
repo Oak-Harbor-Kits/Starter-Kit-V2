@@ -87,6 +87,6 @@ const toggleDarkMode = () => {
 }
 
 // add event listeners to the dark mode buttons
-for (button in darkModeButtons) {
-    darkModeButtons[button].addEventListener('click', () => {toggleDarkMode()})
+for (let i = 0; i < darkModeButtons.length; i++) {
+    darkModeButtons[i].addEventListener('click', () => {toggleDarkMode()})
 }
